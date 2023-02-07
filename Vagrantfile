@@ -20,6 +20,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = settings["software"]["box"]
   config.vm.box_check_update = true
+  config.vm.box_download_insecure=true
+
 
   config.vm.define "master" do |master|
     master.vm.hostname = "master-node"
